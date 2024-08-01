@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestNGActivitySuite" parallel="false" >
+
+   <!--  <test name="TestTestNGActivity" >
+        <classes>
+            <class name="activityFourTestNGtest.Activity4ClassOne"/>
+            <class name="activityFourTestNGtest.Activity4ClassTwo"/>
+            <class name="activityFourTestNGtest.Activity5"/>
+        </classes>
+    </test>
+   
+     <test name="Activity6" >
+      <parameter name="username" value="admin"/>
+      <parameter name="password" value="password"/>
+        <classes>
+            <class name="activityFourTestNGtest.Activity6"/>
+        </classes>
+      </test>  
+      
+      <test name="Activity7" >
+      <classes>
+            <class name="activityFourTestNGtest.Activity7"/>
+        </classes>
+      </test>  
+      
+      <test name="Activity8" >
+      <parameter name="username" value="admin"/>
+      <parameter name="password" value="password"/>
+      <classes>
+      		<class name="testNGActivities.Activity1"/>
+            <class name="testNGActivities.Activity2"/>
+            <class name="testNGActivities.Activity3"/>
+            <class name="activityFourTestNGtest.Activity4ClassOne"/>
+            <class name="activityFourTestNGtest.Activity4ClassTwo"/>
+            <class name="activityFourTestNGtest.Activity5"/>
+             <class name="activityFourTestNGtest.Activity6"/>
+        </classes>
+      </test> -->
+      
+      <test name="Activity9" >
+      <classes>
+            <class name="activityFourTestNGtest.Activity9"/>
+        </classes>
+      </test>  
+      
+      
+        
+</suite>

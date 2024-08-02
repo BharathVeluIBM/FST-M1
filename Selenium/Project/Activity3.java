@@ -14,32 +14,33 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Activity3 {
 
     public static void main(String[] args) throws InterruptedException {
-        // Setup WebDriver
-        WebDriverManager.chromedriver().setup();
+        
+    	WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         WebElement dashboard;
 
-        // Navigate to the login page
+        //a. Open the browser to the login page of OrangeHRM site.
+
         driver.get("http://alchemy.hguy.co:8080/orangehrm/symfony/web/index.php/auth/login");
 
-        // Print home page title
         String title = driver.getTitle();
         System.out.println("Home page title: " + title);
 
-        // Wait for the username field to be visible and then interact with it
+        //b. Find and select the username and password fields
+        //c. Enter login credentials into the respective fields
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtUsername")));
         username.sendKeys("orange");
 
-        // Wait for the password field to be visible and then interact with it
         WebElement password = driver.findElement(By.id("txtPassword"));
         password.sendKeys("orangepassword123");
+        
+        //d. Click login
 
-        // Wait for the login button to be visible and then click it
-        WebElement loginBtn = driver.findElement(By.id("btnLogin"));
+       WebElement loginBtn = driver.findElement(By.id("btnLogin"));
         loginBtn.click();
 
-        // Wait for the dashboard element to be visible
+        //e. Verify that the homepage has opened.
         dashboard = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//b[contains(text(),'Dashboard')]")));
 
         // Check if the dashboard is displayed
@@ -48,8 +49,9 @@ public class Activity3 {
         } else {
             System.out.println("User still not landed into the HomePage");
         }
+        
+        //f.. Close the browser.
 
-        // Close the browser
         driver.close();
         driver.quit();
     }
